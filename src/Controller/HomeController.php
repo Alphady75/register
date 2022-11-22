@@ -16,7 +16,7 @@ class HomeController extends AbstractController
         return new JsonResponse('posts');
     }
 
-    #[Route('/', name: 'home')]
+    #[Route('/', name: 'home', methods: ['POST', 'GET'])]
     public function post(MailerService $mailer): JsonResponse
     {
         $from = 'site@gmail.com';
